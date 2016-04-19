@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iim-9e-Xtf">
+                                <rect key="frame" x="14" y="28" width="75" height="30"/>
+                                <color key="backgroundColor" red="0.94752603769302368" green="0.63848656415939331" blue="0.63524049520492554" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="生成密钥对"/>
+                                <connections>
+                                    <action selector="createKey:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YIF-VF-Mgm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ycc-Am-sCi">
+                                <rect key="frame" x="13" y="80" width="60" height="30"/>
+                                <color key="backgroundColor" red="0.80792945623397827" green="0.94624394178390503" blue="0.62568634748458862" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="公钥加密"/>
+                                <connections>
+                                    <action selector="publicKeyEncryption:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZWb-5M-tuL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5mo-b7-vIg">
+                                <rect key="frame" x="13" y="131" width="60" height="30"/>
+                                <color key="backgroundColor" red="0.80792945623397827" green="0.94624394178390503" blue="0.62568634748458862" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="私钥解密"/>
+                                <connections>
+                                    <action selector="privateKeyDecrypt:" destination="BYZ-38-t0r" eventType="touchUpInside" id="psf-g5-xAj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Dq-eL-vx4">
+                                <rect key="frame" x="13" y="183" width="60" height="30"/>
+                                <color key="backgroundColor" red="0.97801745777918092" green="0.99012189139999995" blue="0.57460040439060822" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="私钥加密"/>
+                                <connections>
+                                    <action selector="privateKeyEncryption:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZF4-Fn-Xkg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pMt-Bz-oNl">
+                                <rect key="frame" x="13" y="230" width="60" height="30"/>
+                                <color key="backgroundColor" red="0.97801745780000005" green="0.99012189139999995" blue="0.57460040440000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="公钥解密"/>
+                                <connections>
+                                    <action selector="publicKeyDecrypt:" destination="BYZ-38-t0r" eventType="touchUpInside" id="b5E-9C-sk1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oqn-MJ-d1J">
+                                <rect key="frame" x="14" y="285" width="60" height="30"/>
+                                <color key="backgroundColor" red="0.69812300101312397" green="0.84398137452065469" blue="0.99012189139999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="导入公钥"/>
+                                <connections>
+                                    <action selector="importThePublicKey:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zQD-c2-iv8"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="51Q-bw-igY">
+                                <rect key="frame" x="126" y="131" width="454" height="449"/>
+                                <color key="backgroundColor" red="0.58626477818020195" green="0.93477905455904331" blue="0.52627829737294973" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gfX-m8-Xku">
+                                <rect key="frame" x="126" y="20" width="454" height="110"/>
+                                <color key="backgroundColor" red="0.88351364634441398" green="1" blue="0.79342964073895794" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Iim-9e-Xtf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-6" id="1O5-3M-fJU"/>
+                            <constraint firstItem="5mo-b7-vIg" firstAttribute="top" secondItem="ycc-Am-sCi" secondAttribute="bottom" constant="21" id="3i4-KN-FTm"/>
+                            <constraint firstItem="51Q-bw-igY" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="111" id="4eC-tU-cpe"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="51Q-bw-igY" secondAttribute="trailing" id="973-iA-XIt"/>
+                            <constraint firstItem="pMt-Bz-oNl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-7" id="9hD-UH-H5O"/>
+                            <constraint firstItem="ycc-Am-sCi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-7" id="JK0-uD-nk8"/>
+                            <constraint firstItem="gfX-m8-Xku" firstAttribute="leading" secondItem="51Q-bw-igY" secondAttribute="leading" id="L7W-G2-Tdu"/>
+                            <constraint firstItem="gfX-m8-Xku" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="LF0-5C-70x"/>
+                            <constraint firstItem="pMt-Bz-oNl" firstAttribute="top" secondItem="6Dq-eL-vx4" secondAttribute="bottom" constant="17" id="Rmv-65-rqY"/>
+                            <constraint firstItem="oqn-MJ-d1J" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-6" id="SdV-O6-Vof"/>
+                            <constraint firstItem="6Dq-eL-vx4" firstAttribute="top" secondItem="5mo-b7-vIg" secondAttribute="bottom" constant="22" id="T7p-MW-6PH"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="51Q-bw-igY" secondAttribute="bottom" constant="20" id="V8b-Ew-U0B"/>
+                            <constraint firstItem="oqn-MJ-d1J" firstAttribute="top" secondItem="pMt-Bz-oNl" secondAttribute="bottom" constant="25" id="X4V-bL-1n8"/>
+                            <constraint firstItem="6Dq-eL-vx4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-7" id="bbj-ox-bj6"/>
+                            <constraint firstItem="Iim-9e-Xtf" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="c71-p4-Uk9"/>
+                            <constraint firstItem="ycc-Am-sCi" firstAttribute="top" secondItem="Iim-9e-Xtf" secondAttribute="bottom" constant="22" id="deM-Qy-Rkh"/>
+                            <constraint firstItem="51Q-bw-igY" firstAttribute="top" secondItem="gfX-m8-Xku" secondAttribute="bottom" constant="1" id="gYp-dF-KXL"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="gfX-m8-Xku" secondAttribute="trailing" id="iQU-LS-FzA"/>
+                            <constraint firstItem="51Q-bw-igY" firstAttribute="leading" secondItem="Iim-9e-Xtf" secondAttribute="trailing" constant="37" id="qzW-2u-QmA"/>
+                            <constraint firstItem="5mo-b7-vIg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-7" id="ygP-8Z-VIC"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="inputTextView" destination="gfX-m8-Xku" id="HEO-e1-SBm"/>
+                        <outlet property="outputTextView" destination="51Q-bw-igY" id="E2C-F9-zba"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="305" y="218"/>
+        </scene>
+    </scenes>
+</document>
